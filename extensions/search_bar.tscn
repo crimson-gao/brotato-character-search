@@ -1,0 +1,23 @@
+[gd_scene format=2]
+
+[node name="PanelContainer" type="PanelContainer"]
+margin_right = 135.0
+margin_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 128.0
+margin_bottom = 33.0
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer"]
+margin_right = 121.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 120, 26 )
+custom_colors/selection_color = Color( 1, 1, 1, 0.235294 )
+custom_colors/cursor_color = Color( 1, 1, 1, 0.827451 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+max_length = 20
+placeholder_text = "search"
+caret_blink = true
+caret_blink_speed = 0.5

@@ -1,0 +1,17 @@
+{
+  "name": "CharacterSearch",
+  "namespace": "Crimson",
+  "version_number": "1.0.0",
+  "description": "角色太多找不到？使用这个mod可以让你在角色选择页面，搜索角色名称，支持本地化语言和英文搜索。\nSearch character by keyword in character selection screen, using localized name or English name.",
+  "website_url": "https://github.com/crimson-gao/brotato-character-search",
+  "dependencies": [],
+  "extra": {
+    "godot": {
+      "incompatibilities": [],
+      "authors": ["Crimson"],
+      "compatible_mod_loader_version": ["6.0.0"],
+      "compatible_game_version": ["0.8.0.3"],
+      "config_defaults": {}
+    }
+  }
+}
