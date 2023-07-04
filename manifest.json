@@ -1,17 +1,60 @@
 {
   "name": "CharacterSearch",
   "namespace": "Crimson",
-  "version_number": "1.0.0",
+  "version_number": "1.1.0",
   "description": "角色太多找不到？使用这个mod可以让你在角色选择页面，搜索角色名称，支持本地化语言和英文搜索。\nSearch character by keyword in character selection screen, using localized name or English name.",
   "website_url": "https://github.com/crimson-gao/brotato-character-search",
-  "dependencies": [],
+  "dependencies": ["dami-ModOptions"],
   "extra": {
     "godot": {
       "incompatibilities": [],
       "authors": ["Crimson"],
       "compatible_mod_loader_version": ["6.0.0"],
       "compatible_game_version": ["0.8.0.3"],
-      "config_defaults": {}
+      "config_schema": {
+        "title": "CharacterSearchConfig",
+        "description": "CharacterSearch的用户配置。Config for CharacterSearch",
+        "type": "object",
+        "properties": {
+          "CS_ENABLE": {
+            "type": "boolean",
+            "default": true,
+            "description": "是否启用此MOD。Enable this mod or not."
+          },
+          "CS_SIZE_X_SCALE": {
+            "type": "number",
+            "default": 1.0,
+            "minimum": 0.1,
+            "multipleOf": 0.01,
+            "maximum": 10.0 ,
+            "description": "搜索框横向缩放系数，100%表示不缩放，小于100%表示缩小，大于100%表示放大。Horizontal scaling factor of the search box, 100% means no scaling, less than 100% means shrinking, greater than 100% means enlarging."
+          },
+          "CS_SIZE_Y_SCALE": {
+            "type": "number",
+            "default": 1.0,
+            "minimum": 0.1,
+            "multipleOf": 0.01,
+            "maximum": 10.0,
+            "description": "搜索框纵向缩放系数，100%表示不缩放，小于100%表示缩小，大于100%表示放大。Vertical scaling factor of the search box, 100% means no scaling, less than 100% means shrinking, greater than 100% means enlarging."
+          },
+          "CS_POS_X_OFFSET": {
+            "type": "number",
+            "default": 0, 
+            "minimum": -19.20,
+            "multipleOf": 0.01,
+            "maximum": 19.20,
+            "description": "搜索框在屏幕上的横向位置偏移，0表示不偏移，大于0表示向右偏移，小于0表示向左偏移。Horizontal position offset of the search box on the screen, 0 means no offset, greater than 0 means offset to the right, less than 0 means offset to the left."
+          },
+          "CS_POS_Y_OFFSET": {
+            "type": "number",
+            "default": 0, 
+            "minimum": -10.80,
+            "multipleOf": 0.01,
+            "maximum": 10.80,
+            "description": "搜索框在屏幕上的纵向位置偏移，0表示不偏移，大于0表示向下偏移，小于0表示向上偏移。Vertical position offset of the search box on the screen, 0 means no offset, greater than 0 means offset down, less than 0 means offset up."
+          }
+        }
+      }
     }
   }
 }
